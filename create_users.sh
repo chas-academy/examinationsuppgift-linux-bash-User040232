@@ -39,7 +39,7 @@ do
 
     # Skapa welcome fil 
     echo "Välkommen $user" > /home/"$user"/welcome.txt
-    echo "Andra användare i systemet:" >> home/"$user"/welcome.txt
+    echo "Andra användare i systemet:" >> /home/"$user"/welcome.txt
 
     # Lista riktiga användare (UID >= 1000)
     awk -F: '$3 >= 1000 {print $1}' /etc/passwd >> /home/"$user"/welcome.txt
